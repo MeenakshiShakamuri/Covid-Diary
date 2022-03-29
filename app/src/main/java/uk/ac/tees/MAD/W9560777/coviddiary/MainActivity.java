@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     TabLayout layout_tab;
     String key_API = "183af7cffe5a40d1a5c499398a760edb";
     TabItem s_Home, s_Health, s_Science, s_Technology, s_Entertainment, s_Sports;
-    PagerAdapter adapter_Pager;
+    PagerAdapter adapterPager;
     Toolbar s_Toolbar;
 
     @Override
@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity {
         s_Sports = findViewById(R.id.sports);
         s_Health = findViewById(R.id.health);
         s_Technology = findViewById(R.id.technology);
+        s_Home = findViewById(R.id.home);
 
-
-        adapter_Pager = new Adapter_Pager(getSupportFragmentManager(),6);
-        viewPager.setAdapter(adapter_Pager);
+        adapterPager = new Adapter_Pager(getSupportFragmentManager(),6);
+        viewPager.setAdapter(adapterPager);
 
 
         layout_tab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 if (tab.getPosition() == 0 || tab.getPosition() == 1 || tab.getPosition() == 2
                         || tab.getPosition() == 3 || tab.getPosition() == 4 || tab.getPosition() == 5 ){
 
-                    adapter_Pager.notifyDataSetChanged();
+                    adapterPager.notifyDataSetChanged();
 
                 }
             }

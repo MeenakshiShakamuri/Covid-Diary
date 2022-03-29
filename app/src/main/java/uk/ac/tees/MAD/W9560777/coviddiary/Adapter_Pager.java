@@ -1,9 +1,13 @@
 package uk.ac.tees.MAD.W9560777.coviddiary;
 
+import android.content.Context;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+
+import java.util.ArrayList;
 
 public class Adapter_Pager extends FragmentPagerAdapter {
 

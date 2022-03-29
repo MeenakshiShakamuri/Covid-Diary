@@ -8,13 +8,56 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class FragmentScience extends Fragment {
+
+    String key_API = "183af7cffe5a40d1a5c499398a760edb";
+    ArrayList<Class_Model> class_modelArrayList;
+    Class_Adapter adapter;
+    String country_name = "us";
+    private RecyclerView science_recyclerview;
+    private String category = "science";
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_science, null);
+
+        science_recyclerview = view.findViewById(R.id.science_recyclerview);
+        class_modelArrayList = new ArrayList<>();
+        science_recyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
+        adapter = new Class_Adapter(class_modelArrayList, getContext());
+        science_recyclerview.setAdapter(adapter);
+
+        findNews();
+
         return view;
+    }
+
+    private void findNews() {
+
+        Utilities_Api.getApiInterface().getCategorical_News(country_name, category, 90, key_API).enqueue(new Callback<Class_Main_News>() {
+            @Override
+            public void onResponse(Call<Class_Main_News> call, Response<Class_Main_News> response) {
+                if (response.isSuccessful()){
+                    class_modelArrayList.addAll(response.body().getArticles());
+                    adapter.notifyDataSetChanged();
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<Class_Main_News> call, Throwable t) {
+
+            }
+        });
     }
 }
