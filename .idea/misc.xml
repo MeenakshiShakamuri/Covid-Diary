@@ -4,6 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/aroni/AndroidStudioProjects/CovidDiary/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/aroni/AndroidStudioProjects/CovidDiary/app/src/main/res/layout/fragment_entertainment.xml" value="0.25" />
+        <entry key="..\:/Users/aroni/AndroidStudioProjects/CovidDiary/app/src/main/res/layout/fragment_health.xml" value="0.25" />
+        <entry key="..\:/Users/aroni/AndroidStudioProjects/CovidDiary/app/src/main/res/layout/fragment_science.xml" value="0.25" />
+        <entry key="..\:/Users/aroni/AndroidStudioProjects/CovidDiary/app/src/main/res/layout/fragment_sports.xml" value="0.25" />
+        <entry key="..\:/Users/aroni/AndroidStudioProjects/CovidDiary/app/src/main/res/layout/fragment_technology.xml" value="0.25" />
+        <entry key="..\:/Users/aroni/AndroidStudioProjects/CovidDiary/app/src/main/res/layout/fragmenthome.xml" value="0.25" />
       </map>
     </option>
   </component>
