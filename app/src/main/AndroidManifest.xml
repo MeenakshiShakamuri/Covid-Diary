@@ -3,6 +3,8 @@
     package="uk.ac.tees.MAD.W9560777.coviddiary">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -11,6 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CovidDiary">
+        <activity
+            android:name=".MainActivity_Finder_City"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
         <activity
             android:name=".Login__Activity"
             android:exported="false" />
@@ -24,7 +32,7 @@
             android:name=".View_Web"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivity_Weather"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

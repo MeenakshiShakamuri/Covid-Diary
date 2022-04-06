@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Creame"
+    tools:context=".MainActivity_Weather">
+
+    <ImageView
+        android:id="@+id/icon_weather"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginTop="86dp"
+        android:src="@drawable/find">
+
+    </ImageView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/finder_City"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/current_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="28dp"
+            android:text="-1° C"
+            android:textColor="@color/black"
+            android:textSize="50sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/condition_Weather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="35dp"
+            android:text=" ------- "
+            android:textColor="@color/black"
+            android:textSize="35sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/name_of_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="35sp"
+            android:text="Loading......."
+            android:textColor="@color/black"
+            android:textSize="45sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/finder_City"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/design_of_btn">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingVertical="2dp"
+            android:text="Search New City"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"></TextView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
