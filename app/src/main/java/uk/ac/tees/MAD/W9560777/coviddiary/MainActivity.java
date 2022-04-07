@@ -5,7 +5,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
@@ -14,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     TabLayout layout_tab;
+    ImageView back;
     String key_API = "183af7cffe5a40d1a5c499398a760edb";
     TabItem s_Home, s_Health, s_Science, s_Technology, s_Entertainment, s_Sports;
     PagerAdapter adapterPager;
@@ -28,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(s_Toolbar);
 
         ViewPager viewPager = findViewById(R.id.fragment_container);
+        back = findViewById(R.id.back);
         layout_tab = findViewById(R.id.include);
         s_Entertainment = findViewById(R.id.entertainment);
         s_Science = findViewById(R.id.science);
@@ -38,6 +43,14 @@ public class MainActivity extends AppCompatActivity {
 
         adapterPager = new Adapter_Pager(getSupportFragmentManager(),6);
         viewPager.setAdapter(adapterPager);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Intro_2.class);
+                startActivity(intent);
+            }
+        });
 
 
         layout_tab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

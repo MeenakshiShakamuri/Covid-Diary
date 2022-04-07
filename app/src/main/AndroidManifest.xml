@@ -3,8 +3,8 @@
     package="uk.ac.tees.MAD.W9560777.coviddiary">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -14,25 +14,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CovidDiary">
         <activity
+            android:name=".Forgot_Passcode"
+            android:exported="false" />
+        <activity
+            android:name=".Intro_2"
+            android:exported="false" />
+        <activity
+            android:name=".Start_Activity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity_Finder_City"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
+            android:name=".MainActivity_Weather"
+            android:exported="false" />
+        <activity
             android:name=".Login__Activity"
             android:exported="false" />
         <activity
-            android:name=".Start_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".Splash_Screen"
+            android:name=".Register"
             android:exported="false" />
         <activity
             android:name=".View_Web"
             android:exported="false" />
         <activity
-            android:name=".MainActivity_Weather"
+            android:name=".Splash_Screen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

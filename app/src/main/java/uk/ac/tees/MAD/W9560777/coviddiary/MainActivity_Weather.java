@@ -37,6 +37,7 @@ public class MainActivity_Weather extends AppCompatActivity {
     final int REQ_CODE = 101;
 
     RelativeLayout finder_City;
+    ImageView back1;
     ImageView icon_weather;
     TextView current_temperature;
     TextView name_of_city;
@@ -53,10 +54,19 @@ public class MainActivity_Weather extends AppCompatActivity {
 
 
         condition_Weather = findViewById(R.id.condition_Weather);
+        back1 = findViewById(R.id.back1);
         current_temperature = findViewById(R.id.current_temperature);
         icon_weather = findViewById(R.id.icon_weather);
         name_of_city = findViewById(R.id.name_of_city);
         finder_City = findViewById(R.id.finder_City);
+
+        back1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity_Weather.this, Intro_2.class);
+                startActivity(i);
+            }
+        });
 
 
         finder_City.setOnClickListener(new View.OnClickListener() {
