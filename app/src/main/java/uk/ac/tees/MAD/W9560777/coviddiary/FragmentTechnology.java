@@ -22,7 +22,9 @@ public class FragmentTechnology extends Fragment {
     String key_API = "183af7cffe5a40d1a5c499398a760edb";
     ArrayList<Class_Model> class_modelArrayList;
     Class_Adapter adapter;
+
     String country_name = "us";
+
     private RecyclerView technology_recyclerview;
     private String category = "technology";
 
@@ -33,7 +35,9 @@ public class FragmentTechnology extends Fragment {
 
         technology_recyclerview = view.findViewById(R.id.technology_recyclerview);
         class_modelArrayList = new ArrayList<>();
+
         technology_recyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
+
         adapter = new Class_Adapter(class_modelArrayList, getContext());
         technology_recyclerview.setAdapter(adapter);
 

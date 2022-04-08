@@ -22,7 +22,9 @@ public class FragmentSports extends Fragment {
     String key_API = "183af7cffe5a40d1a5c499398a760edb";
     ArrayList<Class_Model> class_modelArrayList;
     Class_Adapter adapter;
+
     String country_name = "us";
+
     private RecyclerView sports_recyclerview;
     private String category = "sports";
 

@@ -34,6 +34,7 @@ public class FragmentHealth extends Fragment {
         health_recyclerview = view.findViewById(R.id.health_recyclerview);
         class_modelArrayList = new ArrayList<>();
         health_recyclerview.setLayoutManager(new LinearLayoutManager(getContext()));
+
         adapter = new Class_Adapter(class_modelArrayList, getContext());
         health_recyclerview.setAdapter(adapter);
 
@@ -48,6 +49,7 @@ public class FragmentHealth extends Fragment {
             @Override
             public void onResponse(Call<Class_Main_News> call, Response<Class_Main_News> response) {
                 if (response.isSuccessful()){
+
                     class_modelArrayList.addAll(response.body().getArticles());
                     adapter.notifyDataSetChanged();
                 }

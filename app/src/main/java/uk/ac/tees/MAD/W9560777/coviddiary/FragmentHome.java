@@ -22,6 +22,7 @@ public class FragmentHome extends Fragment {
     String key_API = "183af7cffe5a40d1a5c499398a760edb";
     ArrayList<Class_Model> class_modelArrayList;
     Class_Adapter adapter;
+
     String country_name = "us";
 
     private RecyclerView home_recyclerView;
@@ -34,7 +35,9 @@ public class FragmentHome extends Fragment {
 
         home_recyclerView = view.findViewById(R.id.home_recyclerview);
         class_modelArrayList = new ArrayList<>();
+
         home_recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
         adapter = new Class_Adapter(class_modelArrayList, getContext());
         home_recyclerView.setAdapter(adapter);
 
