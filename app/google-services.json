@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "200745068453",
+    "project_id": "weather-forcast-98fbf",
+    "storage_bucket": "weather-forcast-98fbf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200745068453:android:994c65c849f5dca16faa4c",
+        "android_client_info": {
+          "package_name": "uk.ac.tees.MAD.W9560777.coviddiary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "200745068453-r0gbej86vmq63vuvfalt185ia4rdpm5d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcFWR0GglebOHY0L2hZJxxQhpYGmlbjSo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "200745068453-r0gbej86vmq63vuvfalt185ia4rdpm5d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

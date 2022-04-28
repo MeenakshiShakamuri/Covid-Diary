@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light"
+    android:padding="10dp"
+    android:gravity="center"
+    tools:context=".Login__Activity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:minHeight="20dp"
+        android:text="New User, Register Down!"
+        android:textColor="@color/teal_700"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/nametext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_image"
+        android:layout_marginTop="15dp"
+        android:hint="Name..."
+        android:minHeight="50dp"
+        android:textColor="@color/black" />
+
+
+    <EditText
+        android:id="@+id/email_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nametext"
+        android:layout_marginTop="10dp"
+        android:hint="Email ID..."
+        android:minHeight="50dp"
+        android:textColor="@color/black" />
+
+
+    <Button
+        android:id="@+id/register_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="33dp"
+        android:background="@drawable/design_of_btn"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email_text"
+        android:layout_marginTop="10dp"
+        android:hint="Password..."
+        android:minHeight="50dp"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:id="@+id/register_image"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="12dp"
+        app:srcCompat="@drawable/register" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="74dp"
+        android:layout_below="@+id/password"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="186dp"
+        android:background="@drawable/design_of_btn"
+        android:text="Already User? \n Click Here!"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
